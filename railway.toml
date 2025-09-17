@@ -1,5 +1,9 @@
 [build]
-builder = "NIXPACKS"
+  publish = "/"
+  command = "pip install -r requirements.txt && python src/bot.py"
+
+[build.environment]
+  PYTHON_VERSION = "3.9"
 
 [deploy]
 startCommand = "python src/bot.py"
